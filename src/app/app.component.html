@@ -1,3 +1,40 @@
-<h1>Welcome to Michael's page!</h1>
-<input type="number" [(ngModel)]="wage1">
-<p>{{taxpaid()}}</p>
+<div class="container">
+<h1>Should I change job?</h1>
+
+<h3>Step 1: Pay</h3>
+<table class="u-full-width">
+  <tr>
+    <th></th>
+    <th>Wage 1</th>
+    <th>Wage 2</th>
+    <th>Difference</th>
+  </tr>
+  <tr>
+    <th>Gross</th>
+    <td><input id="gross1input" type="number" [(ngModel)]="gross1" (keyup)="calculate()"></td>
+    <td><input id="gross2input" type="number" [(ngModel)]="gross2" (keyup)="calculate()"></td>
+    <td>{{ grossdiff }}</td>
+  </tr>
+  <tr>
+    <th>Tax</th>
+    <td>{{ tax1 | number:'1.2' }}</td>
+    <td>{{ tax2 | number:'1.2' }}</td>
+    <td>{{ taxdiff | number:'1.2' }}</td>
+  </tr>
+  <tr>
+    <th>NI</th>
+    <td>{{ ni1 | number:'1.2' }}</td>
+    <td>{{ ni2 | number:'1.2' }}</td>
+    <td>{{ nidiff | number:'1.2' }}</td>
+  </tr>
+  <tr>
+    <th>Net</th>
+    <td>{{ net1 | number:'1.2' }}</td>
+    <td>{{ net2 | number:'1.2' }}</td>
+    <td>{{ netdiff | number:'1.2' }}</td>
+  </tr>
+</table>
+
+<h3>Step 2: Travel</h3>
+
+</div>
